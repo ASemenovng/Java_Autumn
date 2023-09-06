@@ -6,7 +6,7 @@ public class Homework1 {
     public static void main(String[] args) {
         // тут можете тестировать ваш код
 
-        System.out.println(convert(10));
+        convert(10);
         System.out.println(normalize(721));
         System.out.println(max(10, 12, -14));
         System.out.println(fact(12));
@@ -20,9 +20,8 @@ public class Homework1 {
     }
 
     // task 1
-    static int convert(int arg) {
+    static void convert(int arg) {
         // Ваш код здесь
-        return arg;
     }
 
 
