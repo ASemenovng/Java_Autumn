@@ -24,10 +24,9 @@ public class Homework1 {
         String binary = Integer.toBinaryString(arg);
         String octary = Integer.toOctalString(arg);
         String hexary = Integer.toHexString(arg).toUpperCase();
+        String output = binary + octary + hexary;
 
-        System.out.print(binary + " ");
-        System.out.print(octary + " ");
-        System.out.print(hexary);
+        System.out.print(output);
     }
 
 
