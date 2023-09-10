@@ -21,7 +21,13 @@ public class Homework1 {
 
     // task 1
     static void convert(int arg) {
-        // Ваш код здесь
+        String binary = Integer.toBinaryString(arg);
+        String octary = Integer.toOctalString(arg);
+        String hexary = Integer.toHexString(arg).toUpperCase();
+
+        System.out.print(binary + " ");
+        System.out.print(octary + " ");
+        System.out.print(hexary);
     }
 
 
