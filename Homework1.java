@@ -21,79 +21,190 @@ public class Homework1 {
 
     // task 1
     static void convert(int arg) {
-        String binary = Integer.toBinaryString(arg);
-        String octary = Integer.toOctalString(arg);
-        String hexary = Integer.toHexString(arg).toUpperCase();
-        String output = binary + octary + hexary;
+        int arg1 = arg;
+        int arg2 = arg;
+        String str1 = new String();
+        while (arg != 0) {
+            if (arg % 16 >= 10) {
+                int m = 55+arg%16;
+                char c = (char) m;
+                str1 = str1 + c;
+            } else {
+                str1 = str1 + Integer.toString(arg1 % 16);
+            }
 
-        System.out.print(output);
+            arg = (arg / 16);
+        }
+        str1 = str1 + " ";
+        while (arg1 != 0) {
+            str1 = str1 + Integer.toString(arg1 % 8);
+            arg1 = (arg1 / 8);
+        }
+        str1 = str1 + " ";
+        while (arg2 != 0) {
+            str1 = str1 + Integer.toString(arg2 % 2);
+            arg2 = (arg2 / 2);
+        }
+
+        StringBuilder sb = new StringBuilder(str1);
+        sb.reverse();
+
+        System.out.println(sb);
     }
 
 
     // task 2
     static int normalize(int angle) {
-        // Ваш код здесь
-        return angle;
+        int n = (angle % 360);
+        if (n < 0) {
+            n = n + 360;
+        }        
+        return n;
     }
 
 
     // task 3
     static int max(int x, int y, int z) {
-        // Ваш код здесь
-        return 0;
+        if ((x > y) && (x > z)) {
+            return x;
+        } else if ((y > x) && (y > z)) {
+            return y;
+        } else {
+            return z;
+        }
     }
 
 
     // task 4
     static int fact(int n) {
-        // Ваш код здесь
-        return 0;
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * fact(n-1);
+        }
     }
-
 
     // task 5
     static BigInteger fact(BigInteger n) {
-        // Ваш код здесь
-        return null;
+        BigInteger l;
+        l = new BigInteger("1");
+        int comparevalue = l.compareTo(n);
+        if (comparevalue == 0) {
+            return l;
+        } else {
+            return n.multiply(fact(n.subtract(l)));
+        }
     }
 
     // task 6
     static void multiplTable() {
-        // Ваш код здесь
+        System.out.print("   ");
+        for (int i = 1; i < 9; i++) {
+            System.out.print(i);
+            System.out.print("  ");
+        }
+        System.out.println(9);
+        for (int i = 1; i < 10; i++) {
+            System.out.print(i);
+            System.out.print("  ");
+            for (int j = 1; j < 9; j++) {
+                System.out.print(j * i);
+                if (i * j <= 9) {
+                    System.out.print(" ");
+                }
+                System.out.print(" ");
+            }
+            System.out.println(9 * i);
+        }
     }
 
 
     // task 7
     static int average(int... nums) {
-        // Ваш код здесь
-        return 0;
+        int l = nums.length;
+        int sm = 0;
+        for (int i = 0; i < l; i++) {
+            sm = sm + nums[i];
+        }
+        return (sm / l + sm % l);
     }
 
 
     // task 8
     static boolean isMagicSquare(int[][] square) {
-        // Ваш код здесь
-        return false;
+        int l = square.length;
+        int f = 0;
+        boolean status = true;
+        for (int i = 0; i < l; i++) {
+            int n = 0;
+            for (int j = 0; j < l; j++) {
+                n = n + square[i][j];
+                if (i == 0) {
+                    f = n;
+                }
+                if (n != f) {
+                    status = false;
+                }
+            }
+        }
+        int n = 0;
+        int p = 0;
+        for (int i = 0; i < l; i++) {
+            n = n + square[i][i];
+            p = p + square[i][l-i-1];
+            if ((n != f) || (p != f)) {
+                    status = false;
+                }
+        }
+        return status;
     }
 
 
     // task 9
     static int[] reverse(int[] arr) {
-        // Ваш код здесь
-        return null;
+        int l = arr.length;
+        int[] arr1 = new int [l];
+        for (int i = (l - 1); i >= 0; i--) {
+            arr1[l - 1 - i] = arr[i];
+        }
+        return arr1;
     }
 
 
     // task 10
     static int[] sort(int[] arr) {
-        // Ваш код здесь
-        return null;
+        int l = arr.length;
+        int s = 0;
+        for (int i = 0; i < l; i++) {
+            for (int j = i; j < l-1; j++) {
+                if (arr[j] > arr[j+1]) {
+                    s = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = s;
+                }
+            }
+        }
+        return arr;
     }
 
 
     // task 11
     static int[] removeExtra(int[] arr, int n) {
-        // Ваш код здесь
-        return null;
+        int l = arr.length;
+        int col = 0;
+        for (int i = 0; i < l; i++) {
+            if (arr[i] != n) {
+                col = col + 1;
+            }
+        }
+        int[] arr1 = new int[col];
+        int tek = 0;
+        for (int i = 0; i < l; i++) {
+            if (arr[i] != n) {
+                arr1[tek] = arr[i];
+                tek = tek + 1;
+            }
+        }
+        return(arr1);
     }
 }
