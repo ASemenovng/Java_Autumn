@@ -26,13 +26,12 @@ public class Homework1 {
         String str1 = new String();
         while (arg != 0) {
             if (arg % 16 >= 10) {
-                int m = 55+arg%16;
+                int m = 55 + arg % 16;
                 char c = (char) m;
                 str1 = str1 + c;
             } else {
                 str1 = str1 + Integer.toString(arg1 % 16);
             }
-
             arg = (arg / 16);
         }
         str1 = str1 + " ";
@@ -45,11 +44,9 @@ public class Homework1 {
             str1 = str1 + Integer.toString(arg2 % 2);
             arg2 = (arg2 / 2);
         }
-
-        StringBuilder sb = new StringBuilder(str1);
-        sb.reverse();
-
-        System.out.println(sb);
+        StringBuilder st = new StringBuilder(str1);
+        st.reverse();
+        System.out.println(st);
     }
 
 
