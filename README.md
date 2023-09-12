@@ -23,3 +23,49 @@
 ## Task 5
 ### 2 балла
 Реализуйте record Contact с параметрами String name, String email. В конструкторе добавьте валидацию: ничего из параметров не должно быть null, имя не должно быть пустым, email должен соответствовать паттерну электронной почты(тут считаем, что у нас вся почта может заканчиваться только на @gmail.com, следовательно нужно взять соответствующую подстроку -- посмотрите про метод substing() в классе String -- и проверить, что данная подстрока соответствует @gmail.com) Также перегрузите конструктор, который принимал бы только одно значение (второе заполните чем-то дефолтным, но так, чтобы это дефолтное соответствовало валидации). Также добавьте метод printName(), который выводит приветствие с имененм из тела record.
+
+## Task 6
+### 3 балла
+Для класса Car из 3 задачи реализуйте паттерн builder и инициализируйте переменные через него. Пример кода можно найти в Lesson2/src/main/java/builder
+
+## Task 7
+### 2 балла
+Реализуйте sealed наследование следующих классов:
+```java
+class Shape {
+  private double volume;
+
+  private void print() {
+   // your code
+  }
+}
+
+class Ball extends Shape {
+  private double radius;
+  // your code
+}
+
+class Cylinder extends Shape {
+  private double height;
+  // your code
+}
+
+class Pyramid extends Shape{
+  private double height;
+  private double area; // площадь основания
+   // your code
+}
+
+class Pyramid extends Shape{
+  private double height;
+  private double area; // площадь основания
+   // your code
+}
+
+class ColourPyramid extends Pyramid{
+  private String colour;
+  // your code
+}
+```
+
+Какие классы объявить non-sealed, а какие final - ваш выбор. Метод print должен выводить информацию о фигуре, его нужно будет переопределить. Также в конструкторе дочерних классов можно (и нужно) пользоваться родительским конструктором. Также некоторые поля могут быть посчитаны сразу (например volume для Ball, то есть вам нужен только радиус), такие вещи нужно посчитать сразу, а не загружать конструктор лишними параметрами. В main создать переменные типа Shape для каждого из типов и вызвать нужные методы. Кто разберется с switch pattern matching и напишет его - +1 балл.
