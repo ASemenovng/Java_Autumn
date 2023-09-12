@@ -15,7 +15,7 @@ static String replace(String str, String oldStr, String newStr) {
   // в строке str все вхождения oldStr заменить на newStr
 }
 
-static String equals(String surname, int mark, String subject) {
+static String format(String surname, int mark, String subject) {
   // вернуть строку, используя форматирование: Студент [Фамилия] получил [оценка] по [предмету]
 }
 
