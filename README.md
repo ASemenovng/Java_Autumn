@@ -7,7 +7,7 @@
 ### 2 балла
 Реализовать следующие методы:
 ```java
-static boolean equals(String s1, String s2) {
+static boolean equals(String s, String t) {
   // проверить, что строки совпадают без учета регистра
 }
 
