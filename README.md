@@ -56,12 +56,6 @@ class Pyramid extends Shape{
    // your code
 }
 
-class Pyramid extends Shape{
-  private double height;
-  private double area; // площадь основания
-   // your code
-}
-
 class ColourPyramid extends Pyramid{
   private String colour;
   // your code
