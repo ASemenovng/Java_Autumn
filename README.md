@@ -17,5 +17,4 @@
 * Системы сборки (Maven/Gradle)
 
 ## Полезные материалы
-[https://habr.com/ru/articles/][habr]
-[habr][https://habr.com/ru/articles/]
+[habr](https://habr.com/ru/articles/)
