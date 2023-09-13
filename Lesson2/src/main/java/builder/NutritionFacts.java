@@ -13,10 +13,10 @@ public class NutritionFacts {
 
     private final int servingSize; // необходимо
     private final int servings; // необходимо
-    private int calories = 0; // опционально
-    private int fat = 0; // опционально
-    private int sodium = 0; // опционально
-    private int carbohydrate = 0; // опционально
+    private int calories; // опционально
+    private int fat; // опционально
+    private int sodium; // опционально
+    private int carbohydrate; // опционально
 
     public Builder(int servingSize, int servings) {
       this.servingSize = servingSize;
