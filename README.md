@@ -17,7 +17,7 @@
 * Системы сборки (Maven/Gradle)
 
 ## Полезные материалы
-[javarush](https://javarush.com) - довольно простые статьи с примерами и упражнениями, подойдет для начала
-[habr](https://habr.com/ru/articles/) - можно найти много довольно подробных статей по тем темам, которые мы будем разбирать
-[Подборка](https://blog.tutortop.ru/java-podborka-poleznyh-resursov-dlya-nachinayushhih/?cid=1694643835604301776) всяких полезных ссылок на сайты/книги и все такое
+* [javarush](https://javarush.com) - довольно простые статьи с примерами и упражнениями, подойдет для начала
+* [habr](https://habr.com/ru/articles/) - можно найти много довольно подробных статей по тем темам, которые мы будем разбирать
+* [Подборка](https://blog.tutortop.ru/java-podborka-poleznyh-resursov-dlya-nachinayushhih/?cid=1694643835604301776) всяких полезных ссылок на сайты/книги и все такое
 *********
