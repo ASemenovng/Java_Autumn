@@ -12,5 +12,10 @@
 * Модули
 *********
 Дополнительно
-* f
+* Основы Linux
+* Git/Github
+* Системы сборки (Maven/Gradle)
+
 ## Полезные материалы
+[https://habr.com/ru/articles/][habr]
+[habr][https://habr.com/ru/articles/]
