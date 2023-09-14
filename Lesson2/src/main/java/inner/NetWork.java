@@ -6,7 +6,7 @@ import java.util.List;
 
 public class NetWork {
 
-  private List<Member> members;
+  private final List<Member> members;
 
   public NetWork() {
     members = new ArrayList<>();
@@ -27,8 +27,8 @@ public class NetWork {
 
   public class Member {
 
-    private String name;
-    private List<Member> friends;
+    private final String name;
+    private final List<Member> friends;
 
     public Member(String name, List<Member> friends) {
       this.name = name;
