@@ -19,7 +19,7 @@ static String format(String surname, int mark, String subject) {
   // вернуть строку, используя форматирование: Студент [Фамилия] получил [оценка] по [предмету]
 }
 
-static boolean insPalindrome(String str) {
+static boolean isPalindrome(String str) {
   // проверить, является ли строка палиндромом
 }
 ```
