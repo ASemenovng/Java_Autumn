@@ -8,7 +8,7 @@ public enum DayOfWeek {
   SATURDAY("SATURDAY"),
   SUNDAY("SUNDAY");
 
-  private String text;
+  private final String text;
 
   DayOfWeek(String text) {
     this.text = text;
