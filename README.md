@@ -83,16 +83,22 @@ public static void printSum(Integer a, Integer b) throws FileNotFoundException {
 ## Task 7
 ### 1 балл
 В методе main перехватить исключение (с сообщением об ошибке), возникающее при выполнении кода:
+```java
 int a = 42 / 0;
+```
 
 ## Task 8
 ### 1 балл
 В методе main перехватить исключение (с сообщением об ошибке), возникающее при выполнении кода:
+```java
 String s = null;
 String m = s.toLowerCase();
+```
 
 ## Task 9
 ### 1 балл
 В методе main перехватить исключение (с сообщением об ошибке), возникающее при выполнении кода:
+```java
 int[] m = new int[2];
 m[8] = 5;
+```
