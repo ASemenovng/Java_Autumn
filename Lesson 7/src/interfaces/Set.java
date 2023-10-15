@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Set {
+public interface Set<E> {
 
 }
