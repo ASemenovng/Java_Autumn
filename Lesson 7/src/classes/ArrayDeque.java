@@ -8,7 +8,7 @@ public class ArrayDeque<E> implements Deque<E> {
   private int size;
   private int nextFirst;
   private int nextLast;
-  private final int CAPACITY = 8;
+  private static final int CAPACITY = 8;
 
   public ArrayDeque() {
     items = new Object[CAPACITY];
