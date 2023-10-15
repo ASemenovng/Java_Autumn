@@ -19,4 +19,6 @@ public interface Deque<E> {
   boolean isEmpty();
 
   int size();
+
+  void printDeque();
 }

@@ -8,10 +8,10 @@ public class ArrayDeque<E> implements Deque<E> {
   private int size;
   private int nextFirst;
   private int nextLast;
-  private final int INITIAL_CAPACITY = 8;
+  private final int CAPACITY = 8;
 
   public ArrayDeque() {
-    items = new Object[INITIAL_CAPACITY];
+    items = new Object[CAPACITY];
     size = 0;
     nextFirst = 0;
     nextLast = 1;
@@ -120,10 +120,10 @@ public class ArrayDeque<E> implements Deque<E> {
     return res;
   }
 
+  @Override
   public void printDeque() {
-    for (int index = plusOne(nextFirst); index != nextLast; index = plusOne(index)) {
-      System.out.print(items[index]);
-      System.out.print(" ");
+    for (int i = plusOne(nextFirst); i != nextLast; i = plusOne(i)) {
+      System.out.print(items[i] + " ");
     }
     System.out.println();
   }

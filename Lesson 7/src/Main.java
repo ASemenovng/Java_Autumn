@@ -1,10 +1,8 @@
 import classes.ArrayDeque;
 import interfaces.Deque;
 import java.util.AbstractSet;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
@@ -14,7 +12,7 @@ public class Main {
     Comparator<String> comp = (s, t) -> s.charAt(1) - t.charAt(0);
 
 
-    ArrayDeque<Integer> aq = new ArrayDeque<>();
+    Deque<Integer> aq = new ArrayDeque<>();
     for (int i = 0; i < 50; i++) {
       aq.addLast(i);
     }
