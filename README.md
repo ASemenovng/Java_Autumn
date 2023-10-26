@@ -3,7 +3,7 @@
 Ниже приведены задачи, функциональность каждой нужно проверить в методе main.
 
 ## Task 1
-### 7 балла
+### 7 баллов
 Напишите MyLinkedList - двусвязный список. Реализуйте интерфейс List из interfaces(метод add(int index, E el) бросает исключение, если индекс больше длины списка). Методы getFirst(), getLast() должны работать за O(1).
 ```java
 public class LinkedList<E> implements List<E>, Iterable<E>{
@@ -64,7 +64,7 @@ public class MyIterator<E> implements Iterator<E> {
 Ваш класс должен реализовывать интерфейс Iterable, но в методе iterator() возвращать MyIterator.
 
 ## Task 2
-### 5 балла
+### 5 баллов
 Напишите обобщенный класс MyDeque, Реализуйте интерфейс Deque из interfaces. Класс MyDeque должен быть реализован через два стека внутри(стек используйте стандартный из java.util). 
 
 ## Task 3
