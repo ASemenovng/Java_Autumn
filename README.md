@@ -30,10 +30,42 @@ public class MyIterator<E> implements Iterator<E> {
 Ваш класс должен реализовывать интерфейс Iterable, но в методе iterator() возвращать MyIterator.
 
 ## Task 2
-### 4 балла
+### 5 балла
+Напишите обобщенный класс MyDeque, Реализуйте интерфейс Deque из interfaces. Класс MyDeque должен быть реализован через два стека внутри(стек используйте стандартный из java.util). 
 
 ## Task 3
-### 2 балла
+### 3 балла
+Реализуйте статический метод rangeList - здесь в возвращаемом значение List<> также из java.util. Все указанные методы должны быть оптимально переопределены.
+```java
+static List<Integer> rangeList(int from, int to) {
+    return new AbstractList<>() {
+      @Override
+      public Integer get(int index) {
+        return null;
+      }
+
+      @Override
+      public int size() {
+        return 0;
+      }
+
+      @Override
+      public int indexOf(Object o) {
+        return super.indexOf(o);
+      }
+
+      @Override
+      public int lastIndexOf(Object o) {
+        return super.lastIndexOf(o);
+      }
+
+      @Override
+      public boolean contains(Object o) {
+        return super.contains(o);
+      }
+    };
+  }
+```
 
 ## Task 4
 ### 2 балла
