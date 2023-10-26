@@ -61,7 +61,7 @@ public class MyIterator<E> implements Iterator<E> {
   }
 }
 ```
-Ваш класс должен реализовывать интерфейс Iterable, но в методе iterator() возвращать MyIterator.
+Ваш класс MyLinkedList должен реализовывать интерфейс Iterable, но в методе iterator() возвращать MyIterator.
 
 ## Task 2
 ### 5 баллов
