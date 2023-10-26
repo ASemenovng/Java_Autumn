@@ -4,7 +4,41 @@
 
 ## Task 1
 ### 7 балла
-Напишите MyLinkedList - двусвязный список. Реализуйте интерфейс List из interfaces(метод add(int index, E el) бросает исключение, если индекс больше длины списка). Также вам нужно создать рядом (в отдельном файле) свой класс MyIterator - наследника стандартного Iterator.
+Напишите MyLinkedList - двусвязный список. Реализуйте интерфейс List из interfaces(метод add(int index, E el) бросает исключение, если индекс больше длины списка).
+```java
+public class LinkedList<E> implements List<E>, Iterable<E>{
+
+  public void add(E el) {}
+
+  public void insertHead(E el) {}
+
+  public void printList() {}
+
+  @Override
+  public void add(int index, E el) {}
+
+  @Override
+  public E get(int index) {
+    return null;
+  }
+
+  @Override
+  public void remove(int index) {}
+
+  public E getFirst() {
+    return null;
+  }
+
+  public E getLast() {
+    return null;
+  }
+
+  @Override
+  public MyIterator<E> iterator() {}
+}
+```
+
+Также вам нужно создать рядом (в отдельном файле) свой класс MyIterator - наследника стандартного Iterator.
 ```java
 public class MyIterator<E> implements Iterator<E> {
 
