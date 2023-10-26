@@ -68,7 +68,22 @@ static List<Integer> rangeList(int from, int to) {
 ```
 
 ## Task 4
-### 2 балла
+### 3 балла
+Напишите класс DoubleIterator, который будет в конструкторе принимать два стандартных итератора и итерироваться по ним (сначала по одному до конца, затем по второму).
+```java
+public class DoubleIterator<T> implements Iterator<T> {
+
+  @Override
+  public boolean hasNext() {
+    return false;
+  }
+
+  @Override
+  public T next() {
+    return null;
+  }
+}
+```
 
 ## Task 5
 ### 2 балла
