@@ -120,5 +120,30 @@ public class DoubleIterator<T> implements Iterator<T> {
 ```
 
 ## Task 5
-### 2 балла
+### 3 балла
+Реализуйте метод sort, который принимает список чисел и сортирует их в порядке удаления от медианы. (Чем число ближе к медиане, тем левее оно в итоговом списке)
+> Медиана набора чисел — число, которое находится в середине этого набора, если его упорядочить по возрастанию, то есть такое число, что половина из элементов набора не меньше него, а другая половина не больше. Например для [1, 3, 7] медиана = 3, для [1, 3, 5, 7] медиана = 4
+```java
+public static List<Integer> medianSort(List<Integer> list) {
+  return null;
+} 
+```
 
+## Task 6
+### 4 балла
+Дан класс Employee. В методе compareTo нужно реализовать сравнение через имя без учета регистра, а если имя совпало, то сравнение по возрасту.
+Также нужно заполнить три статик переменные для кастомных компараторов: EMPLOYEE_AGE_SALARY_COMPARATOR сортирует сначала по возрасту, затем по зарплате; EMPLOYEE_PASSPORT_COMPARATOR сортирует сначала по имени, затем по фамилии и затем по городу (тут регистр важен); EMPLOYEE_FULL_COMPARATOR сортирует по всем полям класса по очереди начиная с имени и заканчивая зп.
+```java
+public class Employee implements Comparable<Employee> {
+
+  private String name;
+  private String surname;
+  private String city;
+  private int age;
+  private int salary;
+
+  public static final Comparator<Employee> EMPLOYEE_AGE_SALARY_COMPARATOR;
+  public static final Comparator<Employee> EMPLOYEE_PASSPORT_COMPARATOR;
+  public static final Comparator<Employee> EMPLOYEE_FULL_COMPARATOR;
+}
+```
