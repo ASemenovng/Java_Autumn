@@ -1,8 +1,9 @@
 package classes;
 
 import interfaces.Deque;
+import java.util.Iterator;
 
-public class ArrayDeque<E> implements Deque<E> {
+public class ArrayDeque<E> implements Deque<E>, Iterable<E> {
 
   private Object[] items;
   private int size;
@@ -44,7 +45,7 @@ public class ArrayDeque<E> implements Deque<E> {
     if (size == items.length) {
       expand();
     }
-    if (size < items.length / 4 && items.length > 8) {
+    if (size < items.length / 4 && items.length > CAPACITY) {
       reduce();
     }
   }
@@ -126,5 +127,10 @@ public class ArrayDeque<E> implements Deque<E> {
       System.out.print(items[i] + " ");
     }
     System.out.println();
+  }
+
+  @Override
+  public Iterator<E> iterator() {
+    return null;
   }
 }

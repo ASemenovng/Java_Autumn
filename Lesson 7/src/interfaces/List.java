@@ -2,6 +2,8 @@ package interfaces;
 
 public interface List<E> {
 
+  void add(E el);
+
   void add(int index, E el);
 
   E get(int index);

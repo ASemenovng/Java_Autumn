@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public interface Queue<E> {
 
-  E add(E el);
+  void add(E el);
 
   E peek();
 

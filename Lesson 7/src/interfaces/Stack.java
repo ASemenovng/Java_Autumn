@@ -2,7 +2,7 @@ package interfaces;
 
 public interface Stack<E> {
 
-  E push(E el);
+  void push(E el);
 
   E peek();
 
