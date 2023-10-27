@@ -34,7 +34,9 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
   }
 
   @Override
-  public MyIterator<E> iterator() {}
+  public MyIterator<E> iterator() {
+    return null;
+  }
 }
 ```
 
