@@ -4,7 +4,7 @@
 
 ## Task 1
 ### 9 баллов
-Напишите MyLinkedList - двусвязный список. Реализуйте интерфейс List из interfaces(метод add(int index, E el) бросает исключение, если индекс больше длины списка). Методы getFirst(), getLast() должны работать за O(1).
+Напишите `MyLinkedList` - двусвязный список. Реализуйте интерфейс List из interfaces(метод add(int index, E el) бросает исключение, если индекс больше длины списка). Методы getFirst(), getLast() должны работать за O(1).
 ```java
 public class LinkedList<E> implements List<E>, Iterable<E>{
 
