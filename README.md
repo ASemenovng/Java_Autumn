@@ -42,7 +42,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
 
 Также вам нужно создать рядом (в отдельном файле) свой класс MyIterator - наследника стандартного Iterator.
 ```java
-public class MyIterator<E> implements Iterator<E> {
+public class MyIterator<T> implements Iterator<T> {
 
   @Override
   public boolean hasNext() {
@@ -50,7 +50,7 @@ public class MyIterator<E> implements Iterator<E> {
   }
 
   @Override
-  public E next() {
+  public T next() {
     return null;
   }
 
@@ -58,7 +58,7 @@ public class MyIterator<E> implements Iterator<E> {
     return false;
   }
 
-  public E previous() {
+  public T previous() {
     return null;
   }
 }
