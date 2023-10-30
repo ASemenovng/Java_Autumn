@@ -1,7 +1,6 @@
 package classes;
 
 import interfaces.List;
-import iterator.MyIterator;
 
 public class LinkedList<E> implements List<E> {
 
