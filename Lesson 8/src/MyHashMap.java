@@ -102,12 +102,6 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
     return h & (length - 1);
   }
 
-
-  @Override
-  public int size() {
-    return size;
-  }
-
   @Override
   public V get(Object key) {
     if (key == null) {
@@ -141,38 +135,6 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
       }
     }
 
-  }
-
-  @Override
-  public boolean containsKey(Object key) {
-    if (key == null) {
-      if (table[0] == null) {
-        return false;
-      } else {
-        Entry<K, V> tE = table[0];
-        while (tE.key != null) {
-          if (tE.next == null) {
-            return false;
-          } else {
-            tE = tE.next;
-          }
-        }
-        return true;
-      }
-    } else {
-      Entry<K, V> tE = table[hash(key.hashCode(), table.length)];
-      if (tE == null) {
-        return false;
-      }
-      while (tE.key == null || !(tE.key.equals(key))) {
-        if (tE.next == null) {
-          return false;
-        } else {
-          tE = tE.next;
-        }
-      }
-      return true;
-    }
   }
 
   @Override
@@ -237,56 +199,6 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
     }
   }
 
-  /**
-   * Rehashes the contents of this map into a new array with a larger capacity.
-   * This method should be called automatically when the number of keys in this
-   * map reaches its threshold.
-   * <p>
-   * If current capacity is MAXIMUM_CAPACITY, this method should not resize the
-   * map, but instead set threshold to Integer.MAX_VALUE. This has the effect of
-   * preventing future calls.
-   *
-   * @param newCapacity the new capacity, MUST be a power of two; must be greater
-   *                    than current capacity unless current capacity is
-   *                    MAXIMUM_CAPACITY (in which case value is irrelevant).
-   *                    However, there is no need to invoke an exception if an
-   *                    invalid capacity is passed in; since this is a helper
-   *                    method only used by your implementation internally, you
-   *                    can guarantee that invalid capacities are not passed in.
-   */
-  void resize(int newCapacity) {
-    // 1. Save the old hash table.
-    // 2. Instantiate a new hash table (unless, of course, the current
-    // capacity is MAXIMUM_CAPACITY).
-    // 3. Re-hash the old table into it. That is, re-hash all the keys as if you
-    // were
-    // reinserting them, in order from index 0 to the end, from the head of the
-    // linked
-    // list to its end.
-    // 4. Set the new table threshold.
-
-    // NOTE: You do not need to worry about resizing down.
-    if (table.length == MAXIMUM_CAPACITY) {
-      threshold = Integer.MAX_VALUE;
-    } else {
-      Entry<K, V>[] copyOfTable = Arrays.copyOf(table, table.length);
-      @SuppressWarnings("unchecked")
-      Entry<K, V>[] newHashTable = (Entry<K, V>[]) new Entry[newCapacity];
-      table = newHashTable;
-      size = 0;
-      for (int i = 0; i < copyOfTable.length; i++) {
-        if (copyOfTable[i] != null) {
-          Entry<K, V> e = copyOfTable[i];
-          while (e != null) {
-            put(e.key, e.value);
-            e = e.next;
-          }
-        }
-      }
-      threshold = (int) (newCapacity * loadFactor);
-    }
-  }
-
   @Override
   public V remove(Object key) {
     if (key == null) {
@@ -348,6 +260,38 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
   }
 
   @Override
+  public boolean containsKey(Object key) {
+    if (key == null) {
+      if (table[0] == null) {
+        return false;
+      } else {
+        Entry<K, V> tE = table[0];
+        while (tE.key != null) {
+          if (tE.next == null) {
+            return false;
+          } else {
+            tE = tE.next;
+          }
+        }
+        return true;
+      }
+    } else {
+      Entry<K, V> tE = table[hash(key.hashCode(), table.length)];
+      if (tE == null) {
+        return false;
+      }
+      while (tE.key == null || !(tE.key.equals(key))) {
+        if (tE.next == null) {
+          return false;
+        } else {
+          tE = tE.next;
+        }
+      }
+      return true;
+    }
+  }
+
+  @Override
   public boolean containsValue(Object value) {
     if (value == null) {
       for (var e : table) {
@@ -374,6 +318,64 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
     }
     return false;
   }
+
+  @Override
+  public int size() {
+    return size;
+  }
+
+
+  /**
+   * Rehashes the contents of this map into a new array with a larger capacity.
+   * This method should be called automatically when the number of keys in this
+   * map reaches its threshold.
+   * <p>
+   * If current capacity is MAXIMUM_CAPACITY, this method should not resize the
+   * map, but instead set threshold to Integer.MAX_VALUE. This has the effect of
+   * preventing future calls.
+   *
+   * @param newCapacity the new capacity, MUST be a power of two; must be greater
+   *                    than current capacity unless current capacity is
+   *                    MAXIMUM_CAPACITY (in which case value is irrelevant).
+   *                    However, there is no need to invoke an exception if an
+   *                    invalid capacity is passed in; since this is a helper
+   *                    method only used by your implementation internally, you
+   *                    can guarantee that invalid capacities are not passed in.
+   */
+  void resize(int newCapacity) {
+    // 1. Save the old hash table.
+    // 2. Instantiate a new hash table (unless, of course, the current
+    // capacity is MAXIMUM_CAPACITY).
+    // 3. Re-hash the old table into it. That is, re-hash all the keys as if you
+    // were
+    // reinserting them, in order from index 0 to the end, from the head of the
+    // linked
+    // list to its end.
+    // 4. Set the new table threshold.
+
+    // NOTE: You do not need to worry about resizing down.
+    if (table.length == MAXIMUM_CAPACITY) {
+      threshold = Integer.MAX_VALUE;
+    } else {
+      Entry<K, V>[] copyOfTable = Arrays.copyOf(table, table.length);
+      @SuppressWarnings("unchecked")
+      Entry<K, V>[] newHashTable = (Entry<K, V>[]) new Entry[newCapacity];
+      table = newHashTable;
+      size = 0;
+      for (int i = 0; i < copyOfTable.length; i++) {
+        if (copyOfTable[i] != null) {
+          Entry<K, V> e = copyOfTable[i];
+          while (e != null) {
+            put(e.key, e.value);
+            e = e.next;
+          }
+        }
+      }
+      threshold = (int) (newCapacity * loadFactor);
+    }
+  }
+
+
 
   @Override
   public String toString() {
