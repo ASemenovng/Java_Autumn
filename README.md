@@ -8,7 +8,7 @@
 - Методы `getFirst(), getLast()` должны работать за O(1).
 
 ```java
-public class LinkedList<E> implements List<E>, Iterable<E>{
+public class MyLinkedList<E> implements List<E>, Iterable<E>{
 
   public void add(E el) {}
 
@@ -27,6 +27,16 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
   @Override
   public void remove(int index) {}
 
+  @Override
+  public int size() {
+    return 0;
+  }
+
+  @Override
+  public boolean isEmpty() {
+    return false;
+  }
+
   public E getFirst() {
     return null;
   }
@@ -34,6 +44,8 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
   public E getLast() {
     return null;
   }
+
+  public void clear() {}
 
   @Override
   public MyIterator<E> iterator() {
@@ -130,7 +142,7 @@ public class DoubleIterator<T> implements Iterator<T> {
 
 ## Task 5
 ### 4 балла
-Реализуйте метод `sort`, который принимает список чисел и сортирует их в порядке удаления от медианы. (Чем число ближе к медиане, тем левее оно в итоговом списке) Внутри метода должен использоваться компаратор(Можно его сделать через `Comparator.comparingInt()`). Если элементы одинаково удалены от медианы, то левее будет меньшее число. Элементы в списке могут повторяться.
+Реализуйте метод `medianSort`, который принимает список чисел и сортирует их в порядке удаления от медианы. (Чем число ближе к медиане, тем левее оно в итоговом списке) Внутри метода должен использоваться компаратор(Можно его сделать через `Comparator.comparingInt()`). Если элементы одинаково удалены от медианы, то левее будет меньшее число. Элементы в списке могут повторяться.
 > Медиана набора чисел — число, которое находится в середине этого набора, если его упорядочить по возрастанию, то есть такое число, что половина из элементов набора не меньше него, а другая половина не больше. Например для [1, 3, 7] медиана = 3, для [1, 3, 5, 7] медиана = 4
 ```java
 public static List<Integer> medianSort(List<Integer> list) {
