@@ -1,6 +1,23 @@
 # Homework 
 ## Дедлайн - 6 ноября 15:30
-Ниже приведены задачи, функциональность каждой нужно проверить в методе main.
+Ниже приведены условия задач, сейчас у вас есть тесты для проверки работы вашего кода. В src/main/java есть две папки - hw_classes и hw_iterator - там классы, которые вам нужно реализовать. Код для задач 3 и 5 лежит в классе ListUtil в hw_classes. В src/test/java есть тестовые классы, которые нужно запускать (большой зеленый треугольничек возле имени тест класса) и тестить ваш код (после того, как вы его напишите). Тесты пройдены, если у вас они горят зеленым. Выглядеть это будет как-то так: <image src="/src/main/resources/тесты неуспех.png" alt="">
+ (тут тесты не работают, так как код не написан).
+
+ Чтобы все это запускать, вам нужен будет maven (можно кратко глянуть, что это такое, сильно вникать пока не обязательно), установите его себе, склонируйте эту ветку и можете тестить. Чтобы установить maven:
+ - на linux:
+   ```bash
+   sudo apt update
+   sudo apt install maven
+   mvn --version
+   ```
+ - на mac:
+   ```bash
+   brew install maven
+   mvn --version
+ - на винде:
+   примите соболезнования и ссылку на [официальный сайт для скачивания](https://maven.apache.org/download.cgi)
+   
+Команда `mvn --version` должна выдать что-то вроде Apache Maven 3.9.5 и еще сколько-то строчек инфы.
 
 ## Task 1
 ### 9 баллов
@@ -10,47 +27,48 @@
 ```java
 public class MyLinkedList<E> implements List<E>, Iterable<E>{
 
-  public void add(E el) {}
+    public void add(E el) {}
 
-  public void insertHead(E el) {}
+    public void insertHead(E el) {}
 
-  public void printList() {}
+    public void printList() {}
 
-  @Override
-  public void add(int index, E el) {}
+    @Override
+    public void add(int index, E el) {}
 
-  @Override
-  public E get(int index) {
-    return null;
-  }
+    @Override
+    public E get(int index) {
+        return null;
+    }
 
-  @Override
-  public void remove(int index) {}
+    @Override
+    public void remove(int index) {}
 
-  @Override
-  public int size() {
-    return 0;
-  }
+    @Override
+    public int size() {
+        return 0;
+    }
 
-  @Override
-  public boolean isEmpty() {
-    return false;
-  }
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
 
-  public E getFirst() {
-    return null;
-  }
+    public E getFirst() {
+        return null;
+    }
 
-  public E getLast() {
-    return null;
-  }
+    public E getLast() {
+        return null;
+    }
 
-  public void clear() {}
+    public void clear() {}
 
-  @Override
-  public MyIterator<E> iterator() {
-    return null;
-  }
+
+    @Override
+    public MyIterator<E> iterator() {
+        return null;
+    }
 }
 ```
 
