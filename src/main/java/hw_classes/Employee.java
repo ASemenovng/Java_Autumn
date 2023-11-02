@@ -1,4 +1,4 @@
-package classes;
+package hw_classes;
 
 import java.util.Comparator;
 
@@ -8,6 +8,7 @@ public class Employee implements Comparable<Employee> {
     private String surname;
     private String city;
     private int age;
+    private int salary;
 
     public Employee(String name, String surname, String city, int age, int salary) {
         this.name = name;
@@ -21,7 +22,6 @@ public class Employee implements Comparable<Employee> {
        this(name, "", "", age, 0);
     }
 
-    private int salary;
 
     public static final Comparator<Employee> AGE_SALARY_COMPARATOR = null;
     public static final Comparator<Employee> PASSPORT_COMPARATOR = null;

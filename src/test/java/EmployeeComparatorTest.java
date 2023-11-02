@@ -1,4 +1,4 @@
-import classes.Employee;
+import hw_classes.Employee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -9,4 +9,8 @@ public interface List<E> {
   E get(int index);
 
   void remove(int index);
+
+  int size();
+
+  boolean isEmpty();
 }

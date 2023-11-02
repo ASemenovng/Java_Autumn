@@ -77,6 +77,16 @@ public class LinkedList<E> implements List<E> {
 
   }
 
+  @Override
+  public int size() {
+    return 0;
+  }
+
+  @Override
+  public boolean isEmpty() {
+    return false;
+  }
+
 
   private static class Node<T> {
     T value;

@@ -1,9 +1,11 @@
+package hw_classes;
+
 import java.util.AbstractList;
 import java.util.List;
 
 public class ListUtil {
 
-    static List<Integer> rangeList(int from, int to) {
+    public static List<Integer> rangeList(int from, int to) {
         return new AbstractList<>() {
             @Override
             public Integer get(int index) {

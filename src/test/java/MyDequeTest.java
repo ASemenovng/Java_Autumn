@@ -1,15 +1,15 @@
+import interfaces.Deque;
 import java.util.NoSuchElementException;
 
-import classes.MyDeque;
+import hw_classes.MyDeque;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MyDequeTest {
 
     @Test
     void justWorks() {
-        MyDeque<Integer> deque = new MyDeque<>();
+        Deque<Integer> deque = new MyDeque<>();
 
         deque.addFirst(1);
         Assertions.assertEquals(1, deque.peekFirst());

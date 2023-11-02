@@ -38,4 +38,14 @@ public class ArrayList<E> implements List<E> {
       array = Arrays.copyOf(array, array.length / 2);
     }
   }
+
+  @Override
+  public int size() {
+    return 0;
+  }
+
+  @Override
+  public boolean isEmpty() {
+    return false;
+  }
 }

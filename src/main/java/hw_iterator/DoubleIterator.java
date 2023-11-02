@@ -1,4 +1,4 @@
-package iterator;
+package hw_iterator;
 
 import java.util.Iterator;
 
