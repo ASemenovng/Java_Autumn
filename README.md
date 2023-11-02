@@ -14,6 +14,8 @@
    ```bash
    brew install maven
    mvn --version
+   ```
+   Если вдруг `brew` у вас не стоит, [вот так](https://www.youtube.com/watch?v=IWJKRmFLn-g) его можно установить.
  - на винде:
    примите соболезнования и ссылку на [официальный сайт для скачивания](https://maven.apache.org/download.cgi)
    
