@@ -32,6 +32,11 @@ public class MyLinkedList<E> implements List<E>, Iterable<E>{
     return 0;
   }
 
+  @Override
+  public boolean isEmpty() {
+    return false;
+  }
+
   public E getFirst() {
     return null;
   }
