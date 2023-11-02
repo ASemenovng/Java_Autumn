@@ -35,6 +35,8 @@ public class MyLinkedList<E> implements List<E>, Iterable<E>{
     return null;
   }
 
+  public void clear() {}
+
   @Override
   public MyIterator<E> iterator() {
     return null;
