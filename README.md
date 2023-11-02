@@ -27,6 +27,11 @@ public class MyLinkedList<E> implements List<E>, Iterable<E>{
   @Override
   public void remove(int index) {}
 
+  @Override
+  public int size() {
+    return 0;
+  }
+
   public E getFirst() {
     return null;
   }
