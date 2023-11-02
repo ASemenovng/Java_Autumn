@@ -14,6 +14,9 @@
    ```bash
    brew install maven
    mvn --version
+ - на винде
+   примите соболезнования и ссылку на [официальный сайт](https://maven.apache.org/download.cgi)
+Команда `mvn --version` должна выдать что-то вроде Apache Maven 3.9.5 и еще сколько-то строчек инфы.
 
 ## Task 1
 ### 9 баллов
