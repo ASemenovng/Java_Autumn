@@ -8,7 +8,7 @@
 - Методы `getFirst(), getLast()` должны работать за O(1).
 
 ```java
-public class LinkedList<E> implements List<E>, Iterable<E>{
+public class MyLinkedList<E> implements List<E>, Iterable<E>{
 
   public void add(E el) {}
 
