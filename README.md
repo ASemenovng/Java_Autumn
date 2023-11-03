@@ -31,6 +31,7 @@ public class MyLinkedList<E> implements List<E>, Iterable<E>{
 
     public void add(E el) {}
 
+    // вставка в начало списка
     public void insertHead(E el) {}
 
     public void printList() {}
@@ -64,6 +65,7 @@ public class MyLinkedList<E> implements List<E>, Iterable<E>{
         return null;
     }
 
+    // очистка списка, после применения меода список должен быть пустой
     public void clear() {}
 
 
