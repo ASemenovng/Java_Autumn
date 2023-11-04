@@ -21,7 +21,7 @@ public static <K, V> Map<V, Collection<K>> inverse(Map<? extends K, ? extends V>
 
 ## Task 3
 ### 4 балла
-Реализуйте методы, вычисляющие объединение, разность, симметрическую разность и пересечение двух множеств, не используя циклы. Вам пригодятся методы Set<> `addAll`, `retainAll` и `removeAll`.
+Реализуйте методы, вычисляющие объединение, разность, симметрическую разность и пересечение двух множеств, не используя циклы. Вам пригодятся методы Set<> `addAll()`, `retainAll()` и `removeAll()`.
 ```java
 public static <E> Set<E> union(Set<? extends E> s1, Set<? extends E> s2) {
   // your code
