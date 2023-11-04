@@ -1,5 +1,6 @@
 # Homework 
 ## Дедлайн - 20 ноября 15:30
+Во всез задачах кроме последней нужно использовать стандартные колеекции из `java.util`.
 
 ## Task 1
 ### 3 балла
@@ -39,4 +40,149 @@ public static <E> Set<E> symmetricDifference(Set<? extends E> s1, Set<? extends 
   // your code
 }
 
+```
+
+## Task 4
+### 15/20 баллов
+Вам нужно реализовать свой `MyHashSet<>` на основе интерфейса `BaseSet<>` - интерфейс лежит в src/set
+Если сделаете реализацию без `Iterable<>` - 15 баллов, если с ним - 20. Если будете делать с `Iterable<>`, то вам удобнее будет сделать свой итератор (рекомендация, а не требование), а не просто реализовывать анонимный класс внутри метода.
+
+Ps. Писать сет на основе мапы внутри нельзя, нужна честная реализация. 
+
+То есть на 15 баллов нужно имплементить интерфейс:
+```java
+public interface BaseSet<E> {
+
+  boolean add(E e);
+
+  boolean remove(Object o);
+
+  boolean contains(Object o);
+
+  boolean equals(Object o);
+
+  boolean isEmpty();
+
+  int size();
+
+  void clear();
+}
+```
+
+На 20 баллов нужно имплементить интерфейс:
+```java
+public interface BaseSet<E> extends Iterable<E> {
+
+  boolean add(E e);
+
+  boolean remove(Object o);
+
+  boolean contains(Object o);
+
+  boolean equals(Object o);
+
+  boolean isEmpty();
+
+  int size();
+
+  void clear();
+
+  Iterator<E> iterator();
+}
+```
+Помните, что идейно `HashSet<>` устроен также, как и `HashMap<>`, поэтому реализация внутри должна быть соответствующая, вам нужно сделать примерно все то, что мы делали с мапой на паре, по этому по итогу у вас должен быть какой-то такой класс:
+```java
+public class MyHashSet<E> implements BaseSet<E> {
+
+  private final static int DEFAULT_CAPACITY = 1 << 4;
+  private static final int MAX_ARRAY_SIZE = 1 << 30;
+  private final static float LOAD_FACTOR = 0.75f;
+
+  private Node<E>[] table;
+  private int size;
+
+
+  private static int hash(Object key) {
+    // your code
+  }
+
+  @SuppressWarnings("unchecked")
+  private void resize() {
+    // your code
+  }
+
+
+
+  @Override
+  public boolean add(E e) {
+    // your code
+  }
+
+  
+  @Override
+  public boolean remove(Object o) {
+    // your code
+  }
+
+
+  @Override
+  public void clear() {
+    // your code
+  }
+
+  @Override
+  public boolean contains(Object o) {
+    // your code
+  }
+
+  @Override
+  public boolean isEmpty() {
+    // your code
+  }
+
+
+  @Override
+  public int size() {
+    // your code
+  }
+
+
+
+  @Override
+  public boolean equals(Object o) {
+    // your code
+  }
+
+
+
+  @Override
+  public Iterator<E> iterator() {
+    // your code
+    // опционально, можно не делать
+  }
+
+  @Override
+  public String toString() {
+    // your code
+  }
+
+
+  static class Node<T> {
+
+    final int hash;
+    final T key;
+    Node<T> next;
+
+    public Node(int hash, T key, Node<T> next) {
+      this.hash = hash;
+      this.key = key;
+      this.next = next;
+    }
+
+    @Override
+    public String toString() {
+      // your code
+    }
+  }
+}
 ```
