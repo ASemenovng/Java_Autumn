@@ -17,7 +17,4 @@ public interface BaseSet<E> extends Iterable<E> {
   int size();
 
   void clear();
-
-  Iterator<E> iterator();
-
 }
