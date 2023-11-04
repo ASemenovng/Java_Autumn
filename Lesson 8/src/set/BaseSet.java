@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 public interface BaseSet<E> extends Iterable<E> {
 
-  boolean add(E e);
+  void add(E e);
 
-  boolean remove(Object o);
+  void remove(Object o);
 
   boolean contains(Object o);
 
