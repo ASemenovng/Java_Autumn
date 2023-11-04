@@ -23,15 +23,15 @@ public static <K, V> Map<V, Collection<K>> inverse(Map<? extends K, ? extends V>
 ### 4 балла
 Реализуйте методы, вычисляющие объединение, разность и пересечение двух множеств, не используя циклы. Вам пригодятся методы Set<> `addAll`, `retainAll` и `removeAll`.
 ```java
-public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
+public static <E> Set<E> union(Set<? extends E> s1, Set<? extends E> s2) {
   // your code
 }
 
-public static <E> Set<E> intersection(Set<E> s1, Set<E> s2) {
+public static <E> Set<E> intersection(Set<? extends E> s1, Set<? extends E> s2) {
   // your code
 }
 
-public static <E> Set<E> difference(Set<E> s1, Set<E> s2) {
+public static <E> Set<E> difference(Set<? extends E> s1, Set<? extends E> s2) {
   // your code
 }
 
