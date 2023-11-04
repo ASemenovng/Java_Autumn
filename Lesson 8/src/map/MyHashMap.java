@@ -1,4 +1,4 @@
-package tmp;
+package map;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -381,9 +381,15 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
 
   @Override
   public String toString() {
-    return "tmp.MyHashMap{" +
-        "table=" + Arrays.toString(table) +
-        '}';
+    StringBuilder result = new StringBuilder("{ ");
+    for (var el : table) {
+      if (el != null) {
+        result.append(el).append(", ");
+      }
+    }
+    result.replace(result.lastIndexOf(","), result.lastIndexOf(",") + 1, "");
+    result.append("}");
+    return result.toString();
   }
 
   static class Entry<K, V> {
@@ -430,7 +436,7 @@ public class MyHashMap<K, V> implements BaseMap<K, V> {
 
     @Override
     public String toString() {
-      return "Entry{" + "key=" + key + ", value=" + value + '}';
+      return key + "=" + value;
     }
   }
 }

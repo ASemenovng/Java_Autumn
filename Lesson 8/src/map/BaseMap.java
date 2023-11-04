@@ -1,11 +1,16 @@
-public interface IMap<K, V> {
+package map;
 
-  V get(Object k);
-  void put(K k, V v);
+public interface BaseMap<K, V> {
+
+  V get(Object key);
+
+  void put(K key, V value);
 
   V remove(Object key);
 
   boolean containsKey(Object key);
+
+
   boolean containsValue(Object value);
 
   int size();

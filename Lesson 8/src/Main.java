@@ -2,16 +2,33 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.WeakHashMap;
+import map.BaseMap;
+import map.MyHashMap;
 
 public class Main {
 
   private static final List<String> BAD_VALUES = List.of("foo", "bar");
   public static void main(String[] args) {
+
+    // create std map
+    Map<String, Integer> hashMap = new HashMap<>();
+    Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+    Map<String, Integer> treeMap = new TreeMap<>();
+    Map<String, Integer> identityHashMap = new IdentityHashMap<>();
+    Map<String, Integer> weakHashMap = new WeakHashMap<>();
+
+    // simple multiMap
     Map<String, List<String>> multiMap = new HashMap<>();
 
+
     List<String> list = List.of("a", "a", "a", "b", "c");
+
+    // task 1 with java.util.Map
     Map<String, Integer> res = new HashMap<>();
     for (String s: list) {
       if (res.containsKey(s)) {
@@ -21,7 +38,19 @@ public class Main {
         res.put(s, 1);
       }
     }
-    System.out.println(res);
+    System.out.println("java.util.Map: " + res);
+
+    // task 1 with MyHashMap
+    BaseMap<String, Integer> baseMap = new MyHashMap<>();
+    for (String s: list) {
+      if (baseMap.containsKey(s)) {
+        int old = baseMap.get(s);
+        baseMap.put(s, old + 1);
+      } else {
+        baseMap.put(s, 1);
+      }
+    }
+    System.out.println("MyHashMap: " + baseMap);
   }
 
   void add(String k, String v, Map<String, List<String>> multiMap) {
