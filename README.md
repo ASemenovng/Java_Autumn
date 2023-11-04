@@ -68,7 +68,7 @@ public class MyHashSet<E> implements BaseSet<E> {
 
   private static final int DEFAULT_CAPACITY = 1 << 4;
   private static final int MAX_CAPACITY = 1 << 30;
-  private static final  float LOAD_FACTOR = 0.75f;
+  private static final float LOAD_FACTOR = 0.75f;
 
   private Node<E>[] table;
   private int size;
