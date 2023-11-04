@@ -52,42 +52,14 @@ Ps. Писать сет на основе мапы внутри нельзя, н
 То есть на 15 баллов нужно имплементить интерфейс:
 ```java
 public interface BaseSet<E> {
-
-  void add(E e);
-
-  void remove(Object o);
-
-  boolean contains(Object o);
-
-  boolean equals(Object o);
-
-  boolean isEmpty();
-
-  int size();
-
-  void clear();
+    // BaseSet methods
 }
 ```
 
 На 20 баллов нужно имплементить интерфейс:
 ```java
 public interface BaseSet<E> extends Iterable<E> {
-
-  void add(E e);
-
-  void remove(Object o);
-
-  boolean contains(Object o);
-
-  boolean equals(Object o);
-
-  boolean isEmpty();
-
-  int size();
-
-  void clear();
-
-  Iterator<E> iterator();
+    // BaseSet methods
 }
 ```
 Помните, что идейно `HashSet<>` устроен также, как и `HashMap<>`, поэтому реализация внутри должна быть соответствующая, вам нужно сделать примерно все то, что мы делали с мапой на паре (должен быть указан `LOAD_FACTOR`, должна быть своя хеш-функция, индекс в элменте считается от хеша и тд), поэтому в итоге у вас должен быть какой-то такой класс:
