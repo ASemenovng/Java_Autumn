@@ -152,6 +152,24 @@ public class MyHashSet<E> implements BaseSet<E> {
     }
 
     @Override
+    public boolean equals(Object o) {
+      if (this == o) {
+        return true;
+      }
+      if (o == null || getClass() != o.getClass()) {
+        return false;
+      }
+      Node<?> node = (Node<?>) o;
+      return hash == node.hash && Objects.equals(key, node.key) && Objects.equals(
+          next, node.next);
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(hash, key, next);
+    }
+
+    @Override
     public String toString() {
       // your code
     }
