@@ -53,9 +53,9 @@ Ps. Писать сет на основе мапы внутри нельзя, н
 ```java
 public interface BaseSet<E> {
 
-  boolean add(E e);
+  void add(E e);
 
-  boolean remove(Object o);
+  void remove(Object o);
 
   boolean contains(Object o);
 
@@ -73,9 +73,9 @@ public interface BaseSet<E> {
 ```java
 public interface BaseSet<E> extends Iterable<E> {
 
-  boolean add(E e);
+  void add(E e);
 
-  boolean remove(Object o);
+  void remove(Object o);
 
   boolean contains(Object o);
 
@@ -114,13 +114,13 @@ public class MyHashSet<E> implements BaseSet<E> {
 
 
   @Override
-  public boolean add(E e) {
+  public void add(E e) {
     // your code
   }
 
   
   @Override
-  public boolean remove(Object o) {
+  public void remove(Object o) {
     // your code
   }
 
