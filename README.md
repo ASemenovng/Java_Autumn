@@ -67,7 +67,7 @@ public interface BaseSet<E> extends Iterable<E> {
 public class MyHashSet<E> implements BaseSet<E> {
 
   private final static int DEFAULT_CAPACITY = 1 << 4;
-  private static final int MAX_ARRAY_SIZE = 1 << 30;
+  private static final int MAX_CAPACITY = 1 << 30;
   private final static float LOAD_FACTOR = 0.75f;
 
   private Node<E>[] table;
