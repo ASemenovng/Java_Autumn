@@ -70,7 +70,7 @@ public class MyHashSet<E> implements BaseSet<E> {
   private static final int MAX_CAPACITY = 1 << 30;
   private static final float LOAD_FACTOR = 0.75f;
 
-  private Node<E>[] table;
+  private Entry<E>[] table;
   private int size;
 
 
@@ -139,13 +139,13 @@ public class MyHashSet<E> implements BaseSet<E> {
   }
 
 
-  static class Node<T> {
+  static class Entry<T> {
 
     final int hash;
     final T key;
-    Node<T> next;
+    Entry<T> next;
 
-    public Node(int hash, T key, Node<T> next) {
+    public Entry(int hash, T key, Entry<T> next) {
       this.hash = hash;
       this.key = key;
       this.next = next;
