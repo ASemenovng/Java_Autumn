@@ -2,7 +2,7 @@ package org.example.stream.data;
 
 public class EmailAddress {
   private String email; //электронный адрес
-  private String someData; /*доп. информация для формирования письма. В примерах не используем — добавили, чтобы оправдать существование отдельного класса :)*/
+  private String someData; // доп. информация для формирования письма. В примерах не используем — добавили, чтобы оправдать существование отдельного класса :)
 
   public EmailAddress(String email) {
     this.email = email;

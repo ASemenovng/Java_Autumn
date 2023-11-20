@@ -3,6 +3,7 @@ package org.example.stream.tasks;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.mapping;
+import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -169,6 +170,6 @@ public class Task {
     return library.getReaders().stream()
         .filter(Reader::isSubscriber)
         .collect(groupingBy(r -> r.getBooks().size() > 2 ? "TOO_MUCH" : "OK",
-            mapping(r -> new EmailAddress(r.getEmail()), Collectors.toList())));
+            mapping(r -> new EmailAddress(r.getEmail()), toList())));
   }
 }
