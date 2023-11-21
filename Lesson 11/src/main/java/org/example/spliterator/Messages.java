@@ -36,7 +36,7 @@ public class Messages {
         if (start >= end) {
           return false;
         }
-        MessageRecord record = MessageRecord.fromString(messages.substring(start * SIZE, (start + 1) * SIZE));
+        action.accept(MessageRecord.fromString(messages.substring(start * SIZE, (start + 1) * SIZE)));
         ++start;
         return true;
       }
