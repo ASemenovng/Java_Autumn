@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Iterator;
@@ -13,6 +14,12 @@ import map.MyHashMap;
 public class Main {
 
   private static final List<String> BAD_VALUES = List.of("foo", "bar");
+
+  public static List<Integer> findPrimes(int n) {
+    // your code
+    return Collections.emptyList();
+  }
+
   public static void main(String[] args) {
 
     // create std map
