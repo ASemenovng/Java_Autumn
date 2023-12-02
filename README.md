@@ -30,3 +30,40 @@ Function<String, String> saySmth (String word) {
 Function<String, String> sayHello = saySmth("Hello");
 System.out.println(sayHello.apply("Alice")); // Выведет "Hello, Alice!"
 ```
+## Task 4
+### 10 балла
+Разбиение текста на слова с использованием собственного Spliterator.
+Допустим, у нас есть поток текста, и мы хотели бы реализовать собственный Spliterator для разбиения текста на слова (разделяемые по пробелу).
+Вам нужно реализовать свой сплитератор для этого:
+```java
+public class WordSpliterator implements Spliterator<String> {
+    
+    @Override
+    public boolean tryAdvance(Consumer<? super String> action) {
+    }
+
+    @Override
+    public Spliterator<String> trySplit() {
+    }
+
+    @Override
+    public long estimateSize() {
+    }
+
+    @Override
+    public int characteristics() {
+    }
+
+    
+}
+```
+По итогу у вас должен работать следующий код:
+```java
+public class Test {
+  public static void main(String[] args) {
+    String text = "This is a sample sentence demonstrating custom Spliterator implementation";
+    Stream<String> wordStream = StreamSupport.stream(new WordSpliterator(text), false);
+    wordStream.forEach(System.out::println);
+  }
+}
+```
