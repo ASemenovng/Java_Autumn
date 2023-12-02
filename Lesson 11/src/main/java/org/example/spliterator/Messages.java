@@ -15,6 +15,12 @@ public class Messages {
     messages.append(message);
   }
 
+  public void addMessage(MessageRecord... message) {
+    for (var rec : message) {
+      messages.append(rec);
+    }
+  }
+
   public Stream<MessageRecord> stream() {
     return StreamSupport.stream(getSpliterator(), false);
   }
