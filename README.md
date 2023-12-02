@@ -35,10 +35,7 @@ System.out.println(sayHello.apply("Alice")); // Выведет "Hello, Alice!"
 ### 5 баллов
 ```java
 public static <T, R> Optional<R> processElements(List<T> elements, Predicate<T> predicate, Function<T, R> mapper, Function<List<R>, R> reduceFunction) {
-        return elements.stream()
-                .filter(predicate)
-                .map(mapper)
-                .reduce(reduceFunction);
+        
     }
 ```
 ## Task 5
