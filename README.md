@@ -31,7 +31,7 @@ Function<String, String> sayHello = saySmth("Hello");
 System.out.println(sayHello.apply("Alice")); // Выведет "Hello, Alice!"
 ```
 
-## Task 4 (пока не готова)
+## Task 4
 ### 3 балла
 Реализуйте обобщенный метод, который список типа T преобразует в тип R. Предварительно нужно отфильтровать по предикату и смаппить тип T в тип R. И спользуйте `stream api.`
 ```java
