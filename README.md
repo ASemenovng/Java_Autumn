@@ -20,7 +20,7 @@ static <A, B, C> Function<A, Function<B, C>> curry(BiFunction<A, B, C> fn){
 
 ## Task 3
 ### 4 балла
-Реализуйте метод `sayHello()`, который при помощи функции `curry()` будет возвращать функцию для форматирования строки по типу "greeting, name!" (параметры задаете вы в методах).
+Реализуйте метод `saySmth()`, который при помощи функции `curry()` будет возвращать функцию для форматирования строки по типу "greeting, name!" (параметры задаете вы в методах).
 ```java
 Function<String, String> saySmth (String word) {
 }
