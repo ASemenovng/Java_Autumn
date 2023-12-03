@@ -3,6 +3,10 @@ package org.example.in_out;
 import java.io.ByteArrayOutputStream;
 import java.lang.ref.Cleaner;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class MyFile implements AutoCloseable{
 
@@ -51,4 +55,11 @@ public class MyFile implements AutoCloseable{
     MyFile mf = new MyFile(1);
     mf.read();
   }
+
+//  public static <T, R> Optional<R> processElements(List<T> elements, Predicate<T> predicate, Function<T, R> mapper, Function<List<R>, R> reduceFunction) {
+//    return elements.stream()
+//        .filter(predicate)
+//        .map(mapper)
+//        .reduce(reduceFunction);
+//  }
 }
