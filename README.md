@@ -32,11 +32,11 @@ System.out.println(sayHello.apply("Alice")); // Выведет "Hello, Alice!"
 ```
 
 ## Task 4 (пока не готова)
-### 5 баллов
+### 3 балла
+Реализуйте обобщенный метод, который список типа T преобразует в тип R. Предварительно нужно отфильтровать по предикату и смаппить тип T в тип R. И спользуйте `stream api.`
 ```java
-public static <T, R> Optional<R> processElements(List<T> elements, Predicate<T> predicate, Function<T, R> mapper, Function<List<R>, R> reduceFunction) {
-        
-    }
+public static <T, R> Optional<R> processElements(List<T> elements, Predicate<T> predicate, Function<T, R> mapper, BinaryOperator<R> operator) {
+}
 ```
 ## Task 5
 ### 10 баллов
