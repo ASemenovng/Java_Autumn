@@ -1,6 +1,8 @@
 # Homework 
 ## Дедлайн - 11 декабря 15:30
 
+Примеры кода по этим темам лежат на ветках 9, 10 и 11. Также вам понадобятся две функции:
+
 ```java
 static <A, B, C> Function<B, C> bind(BiFunction<A, B, C> fn, A a) {
   return b -> fn.apply(a, b);
