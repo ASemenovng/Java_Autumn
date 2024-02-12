@@ -4,6 +4,7 @@ import java.util.stream.IntStream;
 
 public class Test {
 
+
   static class DumbCounter {
     int count;
 
@@ -13,6 +14,7 @@ public class Test {
   }
 
   public static void main(String[] args) {
+
     DumbCounter c1 = new DumbCounter();
     IntStream.range(0, 1_000_000).forEach(i -> c1.increment());
 

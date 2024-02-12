@@ -1,13 +1,16 @@
 package threads;
 
+import java.util.Random;
+
 public class PerformanceComparisonApp {
 
-  private static final int SIZE = 300_000_000;
+  private static final int SIZE = 1_000_000;
   private static final int[] numbers = new int[SIZE];
+  private static final Random r = new Random();
 
   public static void main(String[] args) throws InterruptedException {
     for (int i = 0; i < SIZE; i++) {
-      numbers[i] = (int) (Math.random() * SIZE);
+      numbers[i] = r.nextInt() * SIZE % 100;
     }
 
     // Однопоточное выполнение
@@ -17,6 +20,7 @@ public class PerformanceComparisonApp {
       sum += number;
     }
     long endTime = System.currentTimeMillis();
+
     System.out.println("Single-threaded execution time: " + (endTime - startTime) + " ms");
     System.out.println("Result: " + sum);
 

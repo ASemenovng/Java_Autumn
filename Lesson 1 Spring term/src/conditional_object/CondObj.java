@@ -25,7 +25,5 @@ public class CondObj {
     } finally {
       bankLock.unlock();
     }
-
   }
-
 }

@@ -12,9 +12,9 @@ public class Container {
   }
 
   public static void main(String[] args) throws InterruptedException {
-    // Container container = new Container();
+    Container container = new Container();
     Runnable r = () -> {
-      Container container = new Container();
+      // Container container = new Container();
       for (int i = 0; i < 100_000; ++i) {
         container.addEntry("smth");
       }

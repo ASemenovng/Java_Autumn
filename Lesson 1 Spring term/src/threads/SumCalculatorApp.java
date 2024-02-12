@@ -29,7 +29,9 @@ public class SumCalculatorApp {
     thread2.join();
 
     int totalSum = calculator1.getPartialSum() + calculator2.getPartialSum();
+    int realSum = numbers.stream().reduce(0, Integer::sum);
     System.out.println("Total sum: " + totalSum);
+    System.out.println("Real sum: " + realSum);
   }
 
   private static class SumCalculatorThread implements Runnable {
