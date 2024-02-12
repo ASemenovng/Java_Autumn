@@ -6,7 +6,6 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.stream.Collectors;
 
 public class HotelSearchAggregator {
 
@@ -38,9 +37,9 @@ public class HotelSearchAggregator {
         .map(service -> searchOffers(service).exceptionally(ex -> {
           // Обработка ошибок для каждого сервиса отдельно
           System.out.println("Ошибка при запросе к " + service + ": " + ex.getMessage());
-          return Arrays.asList(service + " не доступен");
+          return List.of(service + " не доступен");
         }))
-        .collect(Collectors.toList());
+        .toList();
 
     // Объединяем результаты всех CompletableFuture в один и ожидаем их выполнения
     CompletableFuture<Void> allFutures = CompletableFuture.allOf(
