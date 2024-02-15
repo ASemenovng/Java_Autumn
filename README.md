@@ -7,7 +7,7 @@
 ### 3 балла
 
 ## Task 2
-### 6 балла
+### 6 баллов
 
 <image src="/Lesson 1 Spring term/images/корабли.jpeg" alt="Текст с описанием картинки">
 
