@@ -1,0 +1,6 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ý8¤°í¶Þ1
+Q
+java:S1874"4Remove this use of "isAccessible"; it is deprecated.(¼«èµ8²°í¶Þ1
+I
+java:S3011",This accessibility update should be removed.(˜ÂÓ˜8´°í¶Þ1

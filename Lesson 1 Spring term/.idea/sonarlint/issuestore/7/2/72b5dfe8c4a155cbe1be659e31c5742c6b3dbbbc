@@ -1,0 +1,9 @@
+
+0
+java:S1220""Move this file to a named package.
+o
+java:S2095!"MUse try-with-resources or close this "ExecutorService" in a "finally" clause.(Ù„üºþÿÿÿÿ8’ìÓ×Ù1
+G	java:S106"+Replace this use of System.out by a logger.(Ù§“€8™ìÓ×Ù1
+{
+java:S21421"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(üŸ´Â8žìÓ×Ù1
+G	java:S1060"+Replace this use of System.out by a logger.(Ö×ðÒ8žìÓ×Ù1

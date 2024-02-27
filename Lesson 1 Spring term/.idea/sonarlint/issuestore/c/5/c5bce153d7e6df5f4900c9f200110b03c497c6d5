@@ -1,0 +1,18 @@
+
+0
+java:S1220""Move this file to a named package.
+L	java:S106"+Replace this use of System.out by a logger.(ğ¾›èÿÿÿÿÿ8Ç¶×Ù1
+{
+java:S2142
+"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8È¶×Ù1
+e
+java:S2276	"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(ªêìüÿÿÿÿ8È¶×Ù1
+G	java:S106"+Replace this use of System.out by a logger.(¾ÆÈ¡8Ê¶×Ù1
+G	java:S106"+Replace this use of System.out by a logger.(È»ü½8Ë¶×Ù1
+L	java:S106"+Replace this use of System.out by a logger.(•ëÙ–ÿÿÿÿÿ8Ì¶×Ù1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8Í¶×Ù1
+`
+java:S2276"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(á˜ ¶8Í¶×Ù1
+G	java:S106"+Replace this use of System.out by a logger.(‰®Úù8Î¶×Ù1
+G	java:S106"+Replace this use of System.out by a logger.(Á®­¾8Ğ¶×Ù1

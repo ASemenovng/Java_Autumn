@@ -1,0 +1,15 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õºªÖÙ1
+7
+java:S1220""Move this file to a named package.8÷ºªÖÙ1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8»ªÖÙ1
+C
+java:S3864"!Remove this use of "Stream.peek".(ˆšõúÿÿÿÿ8’»ªÖÙ1
+G	java:S106%"+Replace this use of System.err by a logger.(½¡á¬8˜»ªÖÙ1
+c
+java:S1128"ARemove this unused import 'java.util.concurrent.ExecutorService'.(æ÷–£ùÿÿÿÿ8˜»ªÖÙ1
+]
+java:S1128";Remove this unused import 'java.util.concurrent.Executors'.(äåÒÛÿÿÿÿÿ8™»ªÖÙ1
+Z
+java:S1128"8Remove this unused import 'java.util.concurrent.Future'.(á¬øíıÿÿÿÿ8™»ªÖÙ1
