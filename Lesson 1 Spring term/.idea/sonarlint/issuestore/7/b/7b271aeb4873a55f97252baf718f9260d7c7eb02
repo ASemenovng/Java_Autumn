@@ -1,9 +1,0 @@
-
-b
-java:S1192"FDefine a constant instead of duplicating this literal "user1" 3 times.(ÑÁá8¨§òåÙ1
-o
-java:S2095 "MUse try-with-resources or close this "ExecutorService" in a "finally" clause.(è¨ŠÔûÿÿÿÿ8¯§òåÙ1
-F	java:S106"+Replace this use of System.out by a logger.(äº›c8·§òåÙ1
-G	java:S106"+Replace this use of System.out by a logger.(ÎÚÒú8¸§òåÙ1
-L	java:S106"+Replace this use of System.out by a logger.(§¾Õûÿÿÿÿ8º§òåÙ1
-L	java:S106"+Replace this use of System.out by a logger.(øÍÀ€ûÿÿÿÿ8»§òåÙ1

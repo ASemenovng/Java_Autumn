@@ -1,10 +1,0 @@
-
-<
-java:S1700"Rename field "stockPrices"(»€¿ûÿÿÿÿ8š³ùåÙ1
-j
-java:S2095"MUse try-with-resources or close this "ExecutorService" in a "finally" clause.(À¦¬À8¥³ùåÙ1
-L	java:S106"+Replace this use of System.out by a logger.(åù«—ùÿÿÿÿ8±³ùåÙ1
-G	java:S106"+Replace this use of System.out by a logger.(‹×ÙÀ8³³ùåÙ1
-{
-java:S2142#"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8²³ùåÙ1
-G	java:S106*"+Replace this use of System.out by a logger.(ÔÈ¾´8øíúåÙ1
